@@ -7,7 +7,7 @@
 	<hr>
 	<div class="container mt-3 text-center">
 		{{ range site.Taxonomies.tags }}
-			<a href="" class="badge badge-light">{{ .Page.Title }}</a>
+			<a href="/tags/{{ .Page.Title }}" class="badge badge-light">{{ .Page.Title }}</a>
 		{{ end }}
 	</div>
 	<hr>
