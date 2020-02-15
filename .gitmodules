@@ -1,0 +1,6 @@
+[submodule "monopriv"]
+	path = monopriv
+	url = https://gitlab.com/kskarthik/monopriv.git
+[submodule "themes/monopriv"]
+	path = themes/monopriv
+	url = https://gitlab.com/kskarthik/monopriv.git
