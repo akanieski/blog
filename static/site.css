@@ -1,0 +1,25 @@
+
+img[src*="#thumbnail"] {
+    width:150px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+ }
+ img[src*="#fullsize"] {
+     width:100%; 
+  }
+ footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+.card-title a {
+    color: #6685a7;
+}
+.navbar {
+    justify-content:center!important;
+}
+.navbar a {
+    margin-right: 45px;
+    margin-left: 45px;
+}

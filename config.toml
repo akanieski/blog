@@ -1,0 +1,60 @@
+baseURL = "https://www.andrewkanieski.com"
+title = "Andrew Kanieski"
+author = "Andrew Kanieski"
+copyright = "Copyright © 20015–2020, Andrew Kanieski; all rights reserved."
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+[params.hero]
+enabled = true
+img = "profile.jpeg"
+
+[params]  
+about = "Software Architect | Passionate Programer | Loving Husband & Father of Two "
+github = "https://github.com/akanieski"
+linkedIn = "https://www.linkedin.com/in/andrewkanieski/"
+email = "emailme@andrewkanieski.com"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
+
