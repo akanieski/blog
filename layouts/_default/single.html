@@ -1,7 +1,7 @@
 {{define "main"}}
 {{- partial "hero.html" . -}}
 {{ if eq .Section "post"}}
-	<section class="container text-justified mt-3">
+	<section class="container text-justified mt-3 bg-light card" style="padding: 25px">
 	  <h2 class="font-weight-bold">{{.Title}}</h2>
 	  <small class="text-secondary mb-5">Posted on {{ .PublishDate.Format "January 2, 2006" }} | {{.ReadingTime}} minute read</small>
 	  <div class="text-monospace mt-2">
