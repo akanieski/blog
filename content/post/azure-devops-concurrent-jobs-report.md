@@ -11,7 +11,7 @@ tags = [
     "parallel-jobs"
 ]
 +++
-If you are looking to move your Azure DevOps Server or TFS implementation to Azure DevOps Services? You will find that the licensing and pricing around concurrent job's has changed.
+If you are looking to move your Azure DevOps Server or TFS implementation to Azure DevOps Services, you will find that the licensing and pricing around concurrent job's has changed.
 
 First, what is a **"concurrent job"** anyway? In short, a job can mean a few different things in Azure DevOps, but a concurrent job relates to a discrete unit of work executed as part of a pipeline (Release or Build). That being said you may find it somewhat difficul to gauge how many concurrent pipelines you are currently using **at most** during the course of business. 
 
