@@ -21,6 +21,10 @@
 	    {{ if .Site.Params.disqus }}
 	      {{ template "_internal/disqus.html" . }}
 	    {{end}}
+		<p>
+		<br>
+			<small>Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</small>
+		</p>
 	</section>
 
 {{else}}
@@ -29,6 +33,11 @@
 	    <div class="">
 			{{ .Content }}
 		</div>
+		<p>
+		<br>
+		<br>
+			<small>Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</small>
+		</p>
 	</section>
 {{end}}
 {{ if .Site.Params.search.enabled}}
