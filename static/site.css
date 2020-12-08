@@ -16,6 +16,14 @@ img[src*="#thumbnail"] {
 .card-title a {
     color: #6685a7;
 }
+.card img {
+    width: 50%;
+}
+@media (max-width:1024px) {
+    .card img {
+        width: 100%;
+    }
+}
 .navbar {
     justify-content:center!important;
 }
