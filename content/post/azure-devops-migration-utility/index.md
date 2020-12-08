@@ -28,7 +28,7 @@ This tool is maintained by it's author Andrew Kanieski with the support of the c
 
 A special thanks to the teams of people that I have worked with over the years that have lent ideas and requested features that have found their way into this tool. Together as a community we can make our work easier and more enjoyable!
 
-![UI Screenshot](/migrator_running.png)
+![UI Screenshot](/media/migrator_running.png)
 
 ##### Download the latest version [here](https://github.com/akanieski/azure-devops-migrator/releases).
 
