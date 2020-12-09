@@ -22,7 +22,7 @@ The command is as follows:
 
 
 
-## Getting a glimpse of what's being purged
+##### Getting a glimpse of what's being purged
 
 If you are like me and are concerned about what exactly is going to be purged, we can take a look at the stored procedure that drives this operation, `[dbo].prc_PurgeLocalVersions`. You will notice that the mechanism used to identify rows for purging based on `LastAccessDate`. If we take this as a baseline we can build a stored procedure that allows us to view what Local Version records will be purged when the job next runs.
 

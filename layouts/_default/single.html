@@ -1,7 +1,21 @@
 {{define "main"}}
-{{- partial "hero.html" . -}}
+<section class="col-lg-4 text-monospace sticky-top-lg" style="float:right;">
+	{{- partial "hero.html" . -}}
+	{{ if .Site.Params.search.enabled }}
+		<hr/>
+        {{partial "search.html" .}}
+	{{end}}
+	<hr>
+	<div class="container mt-3 text-center d-none d-md-block">
+		{{ range site.Taxonomies.tags }}
+			<a href="{{ .Page.Permalink}}" class="badge badge-light">{{ .Page.Title }}</a>
+		{{ end }}
+	</div>
+	<hr class="d-none d-md-block">
+	<small class="d-none d-md-block">Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</small>
+</section>
 {{ if eq .Section "post"}}
-	<section class="container text-justified mt-3 bg-light card" style="padding: 25px; margin-bottom: 60px;">
+	<section class="col-lg-8 text-justified mt-3 card" style="padding: 25px; margin-bottom: 60px; border: 0px;">
 	  <h2 class="font-weight-bold">{{.Title}}</h2>
 	  <small class="text-secondary mb-5">Posted on {{ .PublishDate.Format "January 2, 2006" }} | {{.ReadingTime}} minute read</small>
 	  <div class=" mt-2">

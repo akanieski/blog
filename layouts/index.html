@@ -1,25 +1,31 @@
 {{define "main"}}
-{{- partial "hero.html" . -}}
-<section id="posts" class="container mt-4">
-    {{ if .Site.Params.search.enabled }}
+<section class="col-lg-4 text-monospace sticky-top-lg" style="float:right;">
+	{{- partial "hero.html" . -}}
+	{{ if .Site.Params.search.enabled }}
+		<hr/>
         {{partial "search.html" .}}
 	{{end}}
 	<hr>
-	<div class="container mt-3 text-center">
+	<div class="container mt-3 text-center d-none d-md-block">
 		{{ range site.Taxonomies.tags }}
 			<a href="{{ .Page.Permalink}}" class="badge badge-light">{{ .Page.Title }}</a>
 		{{ end }}
 	</div>
-	<hr>
-	<div class="card-columns mt-3">
+	<hr class="d-none d-md-block">
+	<small class="d-none d-md-block">Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</small>
+</section>
+<section id="posts" class="col-lg-8 mt-4">
+	<div>
 		{{range first 6 .Site.RegularPages }}
 			{{if eq .Section "post"}}
-				<div class="bg-light card">
+				<div class="card post">
 					<div class="card-body">
-					  <h5 class="font-weight-bold card-title"><a href="{{.Permalink}}">{{.Title}}</a></h5>
+					  <h3 class="font-weight-bold card-title"><a href="{{.Permalink}}">{{.Title}}</a></h3>
 					  <h6 class=" card-subtitle mb-2 text-muted">{{ .PublishDate.Format "January 2, 2006" }}</h6>
-					  <small class="card-text">{{.Summary}}</small>
-					  <a href="{{.Permalink}}" class="card-link">Read More...</a>
+					  <!--<small class="card-text">{{.Summary}}</small> -->
+					  {{ .Content }}
+					  <br><br>
+					  <hr/>
 					</div>
 			  </div>
 			{{end}}

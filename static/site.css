@@ -14,7 +14,11 @@ img[src*="#thumbnail"] {
     bottom: 0px;
 }
 .card-title a {
-    color: #6685a7;
+    color: black;
+}
+.card.post{
+    margin-bottom: 30px;
+    border: none;
 }
 .card img {
     width: 50%;
@@ -24,10 +28,26 @@ img[src*="#thumbnail"] {
         width: 100%;
     }
 }
+.card.post {
+    width: 100%;
+}
 .navbar {
-    justify-content:center!important;
+    justify-content:left!important;
 }
 .navbar a {
     margin-right: 45px;
-    margin-left: 45px;
+    margin-left: 10px;
+}
+.navbar a .btn {
+    font-size: 1.5em;
+    color: darkgray;
+}
+
+@media (min-width:1024px) {
+    .sticky-top-lg {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+    }
 }

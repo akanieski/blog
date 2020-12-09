@@ -20,7 +20,7 @@ Sometimes these scenarios may be simple, just move item 1 from project A to proj
 
 That being said I would like to introduce a project I've been working on the ... 
 
-### [Azure DevOps Migration Utility](https://github.com/akanieski/azure-devops-migrator). 
+##### [Azure DevOps Migration Utility](https://github.com/akanieski/azure-devops-migrator). 
 
 This tool was written to create a simple user experience for migrating work items and other entities between projects in Azure DevOps. Working directly with the Azure DevOps REST api takes work. Administrators may not have the time needed to script out migrations using the REST API. This tool aims to make that experience easier.
 
@@ -30,7 +30,7 @@ A special thanks to the teams of people that I have worked with over the years t
 
 ![UI Screenshot](/media/migrator_running.png)
 
-##### Download the latest version [here](https://github.com/akanieski/azure-devops-migrator/releases).
+###### Download the latest version [here](https://github.com/akanieski/azure-devops-migrator/releases).
 
 If you are looking for a feature that's missing or need to report a bug, please follow up in our [GitHub's Issues section](https://github.com/akanieski/azure-devops-migrator/issues/new/choose).
 
