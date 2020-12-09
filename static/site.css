@@ -44,7 +44,7 @@ img[src*="#thumbnail"] {
 }
 .navbar a .btn {
     font-size: 1.5em;
-    color: darkgray;
+    color: black;
 }
 
 @media (min-width:1024px) {
