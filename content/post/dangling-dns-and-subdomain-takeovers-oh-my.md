@@ -19,10 +19,10 @@ the deployment failed. You check the error logs, "Name already in use".
 
 You think, meh, no problem, I'll just run the deployment, maybe the delete hadn't fully committed before the 
 replacement was deployed with the same name. You run it again, "Name already in use". You triple check. Same. You
-go to your resource explorer looking for the VM with the same name. It's not there. What's going on?? 
+go to your resource explorer looking for the Frontdoor with the same name. It's not there. What's going on?? 
 
 You go to visit your application to see if it's running, you swing over to `app.sample.com` which should, by way 
-of a CNAME entry on your domain, route you directly to your VM. You find that the website takes you to some other
+of a CNAME entry on your domain, route you directly to your Frontdoor. You find that the website takes you to some other
 website. Another website, being hosted under **your** subdomain. Have I been hacked?
 
 The scenario I describe above is what's known as a "Dangling DNS Subdomain Takeover", and is a common way for bad 
@@ -38,9 +38,9 @@ CNAME  app.sample.com  ->  app-sample-demo.azurefd.net
 ```
 
 In this example we have a subdomain, `app.sample.com` pointing to `app-sample-demo.azurefd.net`. This allows us to 
-host our site behind Azure Frontdoor using the auto generated url from Azure Frontdoor. Now let's say your using a
-custom domain and custom SSL certificate, so your not using Azure DNS to manage your DNS, for reasons I'll get into
-later in this article.
+host our site behind Azure Frontdoor using the user defined url from Azure Frontdoor. Now let's say your using a
+custom domain and custom SSL certificate on `app.sample.com`, so your not using Azure DNS to manage your DNS, for 
+reasons I'll get into later in this article.
 
 So put yourself into the grimy shoes of a malicious actor, trying to steal cookies from the app hosted in your 
 subdomain. After some reflection you might realize there is a weakness in this chain. What happens if the app owner 
@@ -60,7 +60,8 @@ left pointing to a non-provisioned resource in a multi-tenanted hosting service.
 ### How to mitigate?
 In the scenario described above there are a handful or mechanisms customers can employ to mitigate this risk. Microsoft 
 has a fantastic article that explains this type of attack, and lays out a few key ways of mitigating and some ways of 
-stopping it dead in it's tracks before it even happens. Read more [here](https://docs.microsoft.com/en-us/azure/security/fundamentals/subdomain-takeover#use-azure-dns-alias-records).
+stopping it dead in it's tracks before it even happens. Read more [here](https://docs.microsoft.com/en-us/azure/security/fundamentals/subdomain-takeover#use-azure-dns-alias-records). Use of Azure DNS with "Aliases" addresses this issue. Also note in the article there are other proactive 
+measures that can be taken even if your not ready to Azure DNS.
 
 This particular issue is not one that is unique Azure, and the solutions are also not unique to Azure. Securing your 
 domains and DNS entries from this sort of attack is crucial to maintaining security! 
