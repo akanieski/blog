@@ -1,7 +1,7 @@
 +++
 author = "Andrew Kanieski"
 title = "Dangling DNS and Subdomain Takeovers - Oh My!"
-date = "2019-12-23"
+date = "2021-03-09"
 description = "Dangling DNS and Subdomain Takeovers - Oh My!"
 tags = [
     "frontdoor",
