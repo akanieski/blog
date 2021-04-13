@@ -49,7 +49,9 @@ to access the GitHub REST API. If it is successfull it will mark it as a "confir
 
 ## Results!
 Below you will see the breakdown of suspicious secrets in your team's GitHub accounts as well as whether or not the PAT is 
-active.
+active. You will also get a CSV report with the details
+
+![Alt text](/ReportOutput.png "Report Summary")
 
 ## What about Azure DevOps?
 Just like above, the script can scan our team members public Gists, but instead of verifying if the token is valid and active 
