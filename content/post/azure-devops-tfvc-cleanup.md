@@ -23,7 +23,7 @@ Redistributable Installers, and things like these. Inadvertantly developers may 
 do they know that a dozen other developers in your organization have all uploaded the exact same installer in the database, duplicating 
 for now reason hundreds of gigabytes of data. If left unchecked your database can grow wildly out of control.
 
-### How to find the largest files in your TFVC repos
+#### How to find the largest files in your TFVC repos
 
 The below script can easily be ran against your collection db to locate the largest files, the project they reside in, the changeset 
 they were committed in and when, and who was the brilliant minds behind upload such a file in your precious Azure DevOps data. :-) 
@@ -41,4 +41,4 @@ to ensure the database reduces it's size footprint on disk.
 
 Enjoy!
 
-- Andrew
+**Andrew**
