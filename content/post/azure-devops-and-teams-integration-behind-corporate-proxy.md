@@ -30,7 +30,7 @@ being said how do we configure the App Tier to respect a corporate proxy?
 
 The App Tier servers of Azure Devops have several main components, two of which are the "Background Job Agent" and the 
 "Web Services". Each of these are .NET based applications and as such can be configure much the same as any .NET application.
-Details on this configuration can be foudn (here)[https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings].
+Details on this configuration can be foudn [here](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).
 
 In your Azure DevOps Server installation path you will find two configuration files that will need to be updated. First, lets
 update the `Web Services` component with it's configuration located at `C:\Program Files\Azure DevOps Server 2020\Application Tier\Web Services\web.config`.
@@ -56,5 +56,5 @@ Teams notifications.
 
 One last thing to note: Some customers will find that some users have configured Web Hooks that post notifications to URLs that *do not* need to be 
 routed through the corporate proxy. In such cases you may use the `<bypassList>` node under `<defaultProxy>`. More details on how to configure this 
-setting can be found (here)[https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/bypasslist-element-network-settings].
+setting can be found [here](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/network/bypasslist-element-network-settings).
 
