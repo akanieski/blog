@@ -19,7 +19,7 @@ Microsoft Teams via Service Hooks. With this new integration developers can conf
 in Microsoft Teams of various events from code pushes and pull requests to build output and releases. This helps keep the 
 development team informed throughout the development process.
 
-Excited to try it out, my colleague, Vito Lodese and I recently worked to bring this tool to a large enterprise customer of 
+Excited to try it out, my colleague, **Vito Lodese** and I recently worked to bring this tool to a large enterprise customer of 
 Azure DevOps. If you look at the Microsoft documentation, setting it up is pretty straight forward. We were quickly able to 
 set it up in Azure DevOps Services with little to no friction. But what about customers running Azure DevOps Server that 
 are behind a corporate proxy?
