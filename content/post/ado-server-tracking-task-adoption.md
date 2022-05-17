@@ -7,8 +7,8 @@ tags = [
     "azure-devops",
     "azure",
     "devops",
-    "tfs".
-    "artifactory".
+    "tfs",
+    "artifactory",
     "jfrog",
     "sonarqube",
     "security",
