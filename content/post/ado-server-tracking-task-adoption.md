@@ -1,7 +1,7 @@
 +++
 author = "Andrew Kanieski"
 title = "Tracking Adoption of DevSecOps using Azure DevOps Server"
-date = "2020-07-17"
+date = "2022-05-17"
 description = "A quick solution to tracking the adoption of DevSecOps tools like Artifactory, JFrog and SonarQube across your Azure DevOps footprint"
 tags = [
     "azure-devops",
