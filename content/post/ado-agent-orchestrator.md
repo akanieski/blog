@@ -17,6 +17,8 @@ I've been working on a project that provides an application that can monitor a c
 
 This allows for horizontally scaleable, on-demand agent pools backed by Kubernetes!
 
+Check it out [here](https://github.com/akanieski/ado-agent-orchestrator)!
+
 
 ## Getting Started
 You can first build the docker image:
