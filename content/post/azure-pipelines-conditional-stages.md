@@ -6,8 +6,7 @@ description = "A look at how you can conditionally run stages only when files of
 tags = [
     "azure devops",
     "azure pipelines",
-    "devops",
-    "cleanup"
+    "devops"
 ]
 +++
 **Table of Contents**:
