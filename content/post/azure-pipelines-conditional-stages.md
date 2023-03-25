@@ -10,6 +10,10 @@ tags = [
     "cleanup"
 ]
 +++
+**Table of Contents**:
+- [Identify files that have changes](#how-to-identify-what-files-have-changed-on-a-given-commit)
+- [Conditionally trigger a stage](#how-to-conditionally-trigger-a-stage)
+
 Recently, I worked with a customer with an interesting challenge. They had spent a considerable amount of time implementing a robust Azure Pipelines template that allowed their operations teams to standardize their Pipelines across their enterprise.
 
 One of the key solutions this pipeline provided was an opportunity for their database management team to control 'Environments' in Azure Devops. This database management team could enforce a variety of controls on their environments to ensure the safety and security of their shared database clusters. For example, these environments all required approvals before database changes could be executed in their environments. The team quickly was able to implement this requirement!
@@ -32,6 +36,8 @@ Below, I've wrapped up this `git diff` command with some extra bit of scripting 
 
 One key parameter that this task template requires is the `setVariableNamed` parameter. This indicates where you would like to store the results of our file search. If the commit contains changes that match the given pattern then we set a variable of the given name. This variable will be consumed later on in the pipeline. Official docs on how this works can be found [here](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-variables-scripts?view=azure-devops&tabs=bash).
 
+{{< gist akanieski "902b7c17d6da50be2ef79f3a02ab5b3d" "analyze-changes.yml" >}}
+
 #### How to conditionally trigger a stage?
 
 Now that we have a template task that can identify changes to SQL files, we can go ahead and build out our pipeline. 
@@ -42,7 +48,7 @@ Then we move on to our "conditional stage". Notice the use of the `condition` on
 
 Additionally, its not just stages that can be made conditional, but jobs themselves.
 
-{{< gist akanieski "902b7c17d6da50be2ef79f3a02ab5b3d" >}}
+{{< gist akanieski "902b7c17d6da50be2ef79f3a02ab5b3d" "azure-pipelines.yml" >}}
 
 Enjoy!
 

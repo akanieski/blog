@@ -17,7 +17,7 @@
 {{ if eq .Section "post"}}
 	<section class="col-lg-8 text-justified mt-3 card" style="padding: 25px; margin-bottom: 60px; border: 0px;">
 	  <h2 class="font-weight-bold">{{.Title}}</h2>
-	  <small class="text-secondary mb-5">Posted on {{ .PublishDate.Format "January 2, 2006" }} | {{.ReadingTime}} minute read</small>
+	  <small class="text-secondary mb-3">Posted on {{ .PublishDate.Format "January 2, 2006" }} | {{.ReadingTime}} minute read</small>
 	  <div class=" mt-2">
 		  {{ .Content }}
 	  </div>
