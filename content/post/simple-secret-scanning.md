@@ -50,7 +50,7 @@ hook exits with a non zero exit code.
 Now that the `.git/hooks/pre-commit` file has been created you can go ahead and make sure 
 the pre-commit hook is executable using `chmod +x .git/hooks/pre-commit`. 
 
-{{<<gist akanieski d778dadd8d5159e721ad39a90e948252>>}}
+{{< gist akanieski d778dadd8d5159e721ad39a90e948252 >}}
 
 See below the results of a healthy commit:
 
