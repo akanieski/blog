@@ -32,13 +32,16 @@
 	  {{ end }}
 	  </code>
 	  <br>
-	    {{ if .Site.Params.disqus }}
-	      {{ template "_internal/disqus.html" . }}
-	    {{end}}
-		<p>
-		<br>
-			<small>Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</small>
-		</p>
+	  <br>
+	  <p>
+	  <br>
+		  <small>Disclaimer: The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</small>
+	  </p>
+	  <hr>
+	  <br>
+		{{ partial "customDisqus.html" . }}
+
+		
 	</section>
 
 {{else}}
