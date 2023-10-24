@@ -18,6 +18,8 @@ for all the robust features Service Now offers in their DevOps integration modul
 way of validating a change control number during a pipeline's execution, please find below a simple `Task` 
 template that can be used to validte change controls in service now.
 
+**Note: We could improve the below by switching from Basic auth to OAuth. Perhaps in a future post I can provide an example**
+
 ```
 parameters:
 - name: changeControlNumber
