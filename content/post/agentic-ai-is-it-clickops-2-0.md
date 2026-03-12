@@ -11,11 +11,7 @@ Over the past year or so we’ve seen a surge of tools promising *Agentic AI*. T
 
 > Give the AI a goal, and it will figure out the steps to accomplish it.
 
-Deploy infrastructure.  
-Fix a broken pipeline.  
-Stand up a new service.
-
-Instead of writing scripts or infrastructure definitions, you describe the outcome and let the agent figure out the process.
+Deploy infrastructure, fix a broken pipeline, stand up a new service. Instead of writing scripts or infrastructure definitions, you describe the outcome and let the agent figure out the process.
 
 On the surface, this sounds like a massive leap forward.
 
@@ -23,22 +19,11 @@ But it also feels strangely familiar.
 
 ## A quick trip down memory lane
 
-Before Infrastructure as Code became common practice, a lot of cloud infrastructure was built directly in web portals.
-
-Click here.  
-Add a resource.  
-Set a configuration.  
-Save.
+Before Infrastructure as Code became common practice, a lot of cloud infrastructure was built directly in web portals. You clicked here, added a resource, set a configuration, and hit save.
 
 This worked fine early on, but as environments grew larger the approach started to break down. It became difficult to track what had changed, harder to reproduce environments, and nearly impossible to audit reliably.
 
-Eventually the industry gravitated toward declarative infrastructure:
-
-- Terraform
-- ARM / Bicep
-- CloudFormation
-
-Infrastructure moved into version control, deployments became repeatable, and environments became easier to reason about.
+Eventually the industry gravitated toward declarative infrastructure using tools like Terraform, ARM/Bicep, and CloudFormation. Infrastructure moved into version control, deployments became repeatable, and environments became easier to reason about.
 
 We even coined a name for the old way of doing things: **ClickOps**.
 
@@ -46,21 +31,11 @@ We even coined a name for the old way of doing things: **ClickOps**.
 
 Agentic AI flips the model again.
 
-Instead of writing configuration code, we provide intent through natural language.
-
-“Deploy a secure Kubernetes cluster with monitoring enabled.”
-
-Or:
-
-“Fix the failing CI pipeline and redeploy the service.”
+Instead of writing configuration code, we provide intent through natural language: “Deploy a secure Kubernetes cluster with monitoring enabled,” or “Fix the failing CI pipeline and redeploy the service.”
 
 The agent then determines the steps required and executes them.
 
-Which raises an interesting question:
-
-Are we moving back toward ClickOps?
-
-Just with a very capable robot doing the clicking.
+Which raises an interesting question: are we moving back toward ClickOps, just with a very capable robot doing the clicking?
 
 ## The reproducibility problem
 
@@ -70,35 +45,19 @@ Agent-driven workflows can be different.
 
 Two similar prompts might produce slightly different solutions depending on context, model behavior, or changes in the surrounding environment.
 
-That introduces some practical concerns:
-
-- How do we audit what the agent changed?
-- How do we reproduce the same environment later?
-- How do we roll back if the agent makes a questionable decision?
+That introduces practical concerns around auditing what changed, reproducing the same environment later, and rolling back when the agent makes a questionable decision.
 
 These are problems DevOps teams spent the last decade solving.
 
 ## Where agents actually shine
 
-That said, Agentic AI is genuinely useful when applied in the right places.
-
-For example:
-
-- generating infrastructure templates
-- scaffolding CI/CD pipelines
-- troubleshooting operational issues
-- automating repetitive engineering tasks
+That said, Agentic AI is genuinely useful when applied in the right places. It is great for generating infrastructure templates, scaffolding CI/CD pipelines, troubleshooting operational issues, and automating repetitive engineering tasks.
 
 In these cases the agent acts more like a pair engineer than a replacement for the system itself.
 
 ## The sweet spot
 
-The workflow that seems to work best is something like this:
-
-1. Use agents to propose solutions.
-2. Convert those solutions into declarative infrastructure or code.
-3. Commit the result to source control.
-4. Let automation handle the execution.
+The workflow that seems to work best is straightforward: use agents to propose solutions, convert those solutions into declarative infrastructure or code, commit the result to source control, and let automation handle execution.
 
 Agents become a powerful design assistant, but the authoritative definition of the system still lives in version-controlled code.
 
@@ -108,6 +67,4 @@ Agentic AI is a powerful tool, but convenience has a way of creeping into engine
 
 If the past decade taught us anything, it’s that **repeatability beats convenience over time**.
 
-Agents may help us design systems faster.
-
-But keeping the blueprint in code is still what keeps those systems understandable.
+Agents may help us design systems faster, but keeping the blueprint in code is still what keeps those systems understandable.
